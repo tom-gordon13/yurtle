@@ -1,6 +1,7 @@
 <script>
   import LetterBoxContainer from "./LetterBoxContainer.svelte";
   import WinLossContainer from "./WinLossContainer.svelte";
+  import MainHeader from "./MainHeader.svelte";
   import { onMount, onDestroy } from "svelte";
 
   const wordLength = 5;
@@ -52,6 +53,7 @@
   });
 </script>
 
+<MainHeader />
 <div class="top-container" on:keydown={handleKeydown}>
   <LetterBoxContainer
     {wordLength}

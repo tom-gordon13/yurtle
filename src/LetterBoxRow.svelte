@@ -32,14 +32,15 @@
   }
 
   .letter-box {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     border: 1px solid black;
-    margin: 4px 2px;
+    margin: 0.5rem 0.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 2rem;
   }
 
   .correct-letter {
