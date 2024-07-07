@@ -1,6 +1,22 @@
 <script>
+    import { onMount, onDestroy } from "svelte";
+
     export let gameState;
     export let handleReset;
+
+    function handleKeydown(event) {
+        if (gameState && event.key === "Enter") {
+            handleReset();
+        }
+    }
+
+    onMount(() => {
+        window.addEventListener("keydown", handleKeydown);
+    });
+
+    onDestroy(() => {
+        window.removeEventListener("keydown", handleKeydown);
+    });
 </script>
 
 <div class="win-loss-container">
